@@ -427,6 +427,15 @@
 </Values>
 </DATA>
 </MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/noclaim;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">0</value>
+</Values>
+</DATA>
+</MAPSET>
 </MAP>
 </SEQUENCE>
 
@@ -1693,6 +1702,9 @@
 
   <!-- nodes -->
 
+<MAPDELETE FIELD="/isNumber;1;0">
+</MAPDELETE>
+
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/noclaimFactor;1;0">
   <DATA ENCODING="XMLValues" I18N="true">
 
@@ -1702,8 +1714,14 @@
 </DATA>
 </MAPSET>
 
-<MAPDELETE FIELD="/isNumber;1;0">
-</MAPDELETE>
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/noclaim;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">0</value>
+</Values>
+</DATA>
+</MAPSET>
 </MAP>
 </SEQUENCE>
 </SEQUENCE>
@@ -1834,6 +1852,15 @@
 
 <Values version="2.0">
   <value name="xml">1</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/noclaim;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">0</value>
 </Values>
 </DATA>
 </MAPSET>
