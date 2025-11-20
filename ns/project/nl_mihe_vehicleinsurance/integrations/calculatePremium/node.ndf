@@ -114,7 +114,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Misja.Heuveling@ibm.com</value>
-    <value name="lastModifiedDate">1763633670096</value>
+    <value name="lastModifiedDate">1763635585141</value>
     <value name="displayName">calculatePremium</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -313,8 +313,8 @@
           <null name="services"/>
         </record>
         <record name="serviceName" javaclass="com.wm.util.Values">
-          <value name="displayName">multiplyInts</value>
-          <value name="serviceName">pub.math:multiplyInts</value>
+          <value name="displayName">multiplyFloats</value>
+          <value name="serviceName">pub.math:multiplyFloats</value>
           <value name="transformerSupport">true</value>
         </record>
         <number name="ui_step_index" type="Long">9</number>
