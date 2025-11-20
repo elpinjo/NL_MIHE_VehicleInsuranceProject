@@ -131,7 +131,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Misja.Heuveling@ibm.com</value>
-    <value name="lastModifiedDate">1763636946314</value>
+    <value name="lastModifiedDate">1763637154092</value>
     <value name="displayName">calculatePremium</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">

@@ -2305,9 +2305,6 @@
 <MAPDELETE FIELD="/noclaimFactor;1;0">
 </MAPDELETE>
 
-<MAPDELETE FIELD="/noclaim;1;0">
-</MAPDELETE>
-
 <MAPDELETE FIELD="/postalcode;1;0">
 </MAPDELETE>
 
