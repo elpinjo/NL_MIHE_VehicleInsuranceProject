@@ -7,21 +7,95 @@ packages:
   gitUrl: https://github.com/elpinjo
   gitUsername: elpinjo
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:insurance
+  packages:
+  - name: NL_MIHE_VehicleInsuranceProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.nl_mihe_vehicleinsurance.integrations:calculatePremium
+  packages:
+  - name: NL_MIHE_VehicleInsuranceProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.nl_mihe_vehicleinsurance.integrations:requestInsurance
+  packages:
+  - name: NL_MIHE_VehicleInsuranceProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
-  jdbc.O2C_DB_CONN.maxConns: "10"
-  jdbc.O2C_DB_CONN.expireTime: "60000"
-  jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
-    on the O2C project
-  jdbc.O2C_DB_CONN.waitingThread: "0"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.serverName
+  : 192.168.25.8
   jdbc.O2C_DB_CONN.userid: aaidadbs3user
-  jdbc.O2C_DB_CONN.snoopenabled: "false"
-  jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
   jdbc.O2C_DB_CONN.minConns: "0"
   jdbc.O2C_DB_CONN.spyenabled: "false"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.startupBackoffSecs
+  : "10"
   jdbc.O2C_DB_CONN.snoopparms: "ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/[object\
     \ Object].log;ddtdbg.ProtocolTraceShowTime=true"
-  jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
-  jdbc.O2C_DB_CONN.poolThreshold: "0"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.heartBeatInterval
+  : "0"
   jdbc.O2C_DB_CONN.useSSL: "false"
-  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.startupRetryCount
+  : "0"
   jdbc.O2C_DB_CONN.driverAlias: DataDirect Connect JDBC PostgreSQL Driver
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.portNumber
+  : "5432"
+  jdbc.O2C_DB_CONN.maxConns: "10"
+  jdbc.O2C_DB_CONN.expireTime: "60000"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.otherProperties
+  : loginTimeout=60;
+  jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
+    on the O2C project
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionEnabled
+  : "false"
+  jdbc.O2C_DB_CONN.waitingThread: "0"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.poolable
+  : "true"
+  jdbc.O2C_DB_CONN.snoopenabled: "false"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.password
+  : "{AES}XIDzrZwOpNqmOfOjCm/zOetMCFu9C6x7tEOMP52Dv6hfZp1qHfdDwVT3OtEZJD0uAHsFDl/1gVbVybsUFT5yc2mK1wuN3U1rA1B0VhuZoUw="
+  jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.trustStore
+  : ""
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.keyStore
+  : ""
+  jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.datasourceClass
+  : org.postgresql.ds.PGSimpleDataSource
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.user
+  : postgres
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.driverType
+  : postgresGroup
+  jdbc.O2C_DB_CONN.poolThreshold: "0"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.databaseName
+  : insurance
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.poolIncrementSize
+  : "1"
+  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.NL_MIHE_VehicleInsuranceProject.project.nl_mihe_vehicleinsurance.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.insurance.connectionSettings.dbType
+  : POSTGRESQL
